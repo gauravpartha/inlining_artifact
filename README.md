@@ -32,7 +32,7 @@ In the folders for GRASShopper, VeriFast, Nagini and RSL-Viper a .json is stored
 
 ## Lines of code
 In the following, we explain how we count the lines of code in Table 1.
-For all of the examples we ignore any annotations.
+For all of the examples we ignore any annotations (except those for abstract methods without a body, which are not inlined and where the annotations always describe the semantics of the call). We also ignore clients that we wrote ourselves.
 * For Nagini, we ignored all the lines up to the first predicate or method,
 since most of these lines are generated automatically for each example.
 * For RSL-Viper, we expand all the macros and get rid of all of the dead code.
