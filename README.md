@@ -85,10 +85,4 @@ command would then be:
 
 `sbt run --SI 2 --entry main --modularSC --boogieExe [path to Boogie] --z3Exe [path to Z3] test.vpr`
 
-
-
-
-
-
-
-
+`sbt run --help` shows more options.
