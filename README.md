@@ -61,7 +61,7 @@ The source for our inlining tool for Viper, which also checks the structural sou
 
 ### Set dependencies
 One can either provide explicit command-line options to the main tool for the 
-Boogie and Z3 (shown below). Alternatively, one can set the path to the 
+Boogie and Z3 binaries (shown below). Alternatively, one can set the path to the 
 corresponding binaries  (boogie.exe and z3.exe) to environment variables 
 BOOGIE_EXE (for Boogie) and  Z3_EXE (for Z3).
 
