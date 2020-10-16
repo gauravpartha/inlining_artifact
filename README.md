@@ -18,11 +18,26 @@ The formalization works with both Isabelle 2019 and Isabelle 2020.
 # Examples
 The examples are split into subfolders. One for each verifier from which we took examples (these are the examples from Table 1) and one for the examples that mainly satisfy the syntactic condition (these are the examples from Table 2).
 
+## Names
 The names of the examples in Table 1 are slightly different to the names here (we shortened them in the paper due to space constraints). Here is the correspondence for those that are unclear:
 
 * RelAcqRustARCStronger_inline represents rust_arc_1 and rust_arc_2. The client "new_clone" was inlined for rust_arc_2, while the remaining clients were inlined from rust_arc_1.
 * RelAcqDblMsgPassSplit represents msg_pass_split_1 and msg_pass_split_2. The client "client_sound" was used for msg_pass_split_1 and the client "client_unsound" was used for msg_pass_split_2.
 * vstte2012_problem2.vpr represents combinator
+
+## Run configurations
+In the folders for GRASShopper, VeriFast, Nagini and RSL-Viper a .json is stored which shows the test configurations used for the experiments. Note that we inlined multiple methods for each example in Table 1. Sometimes we also wrote multiple files for convenience (to introduce errors), it should be clear which files belong to which examples in Table 1 from the names. In VeriFast, the different errors can be triggered by changing the ERROR macro accordingly (in the .json file this is reflected by referring to different files).
+
+## Lines of code
+In the following, we explain how we count the lines of code in Table 1.
+For all of the examples we ignore any annotations.
+* For Nagini, we ignored all the lines up to the first predicate or method,
+since most of these lines are generated automatically for each example.
+* For RSL-Viper, we expand all the macros and get rid of all of the dead code.
+The lines of code are taken from the resulting program excluding any axioms and
+functions, since most of these are generated for each example.
+* For VeriFast and GRASShopper, we take the all the lines 
+(since we manually translated these and thus there should not be any redundancies).
 
 
 # Inlining Tool
