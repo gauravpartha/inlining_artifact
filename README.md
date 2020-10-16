@@ -5,7 +5,7 @@ This repository contains the artifact for the paper "Sound Inlining for Automati
 - The soundness proof (Theorem 1) mechanized in Isabelle/HOL (./soundness)
 - The completeness proof proved on paper (./completeness/completeness_proof.pdf)
 - The examples used for the evaluation (./examples)
-- A link to the source of the tool (https://github.com/tdardinier/carbon) and instructions how to install it
+- A link to the source of the tool (https://github.com/tdardinier/carbon) and instructions how to install it (see below)
 
 # Soundness Proof
 The Isabelle/HOL formalization of the soundness theorem (Theorem 3.1) contains 3 files:
