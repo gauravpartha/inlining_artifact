@@ -18,6 +18,8 @@ The formalization works with both Isabelle 2019 and Isabelle 2020.
 # Examples
 The examples are split into subfolders. One for each verifier from which we took examples (these are the examples from Table 1) and one for the examples that mainly satisfy the syntactic condition (these are the examples from Table 2).
 
+For each of the files not in the syntactic folder, there is a corresponding file which is from the original test suite of that verifier (in some cases we removed code that was not relevant for our experiments).
+
 ## Names
 The names of the examples in Table 1 are slightly different to the names here (we shortened them in the paper due to space constraints). Here is the correspondence for those that are unclear:
 
