@@ -16,9 +16,14 @@ The Isabelle/HOL formalization of the soundness theorem (Theorem 3.1) contains 3
 The formalization works with both Isabelle 2019 and Isabelle 2020.
 
 # Examples
-The examples are split into two subfolders:
-- ./examples/non_syntactic: Those that do not satisfy the syntactic soundness condition, i.e., those from Table 1. Here the examples are divided according to the verifier. 
-- ./examples/syntactic: Those that satisfy the syntactic soundness condition (with the exception of two examples), i.e., those from Table 2 in the appendix.
+The examples are split into subfolders. One for each verifier from which we took examples (these are the examples from Table 1) and one for the examples that mainly satisfy the syntactic condition (these are the examples from Table 2).
+
+The names of the examples in Table 1 are slightly different to the names here (we shortened them in the paper due to space constraints). Here is the correspondence for those that are unclear:
+
+* RelAcqRustARCStronger_inline represents rust_arc_1 and rust_arc_2. The client "new_clone" was inlined for rust_arc_2, while the remaining clients were inlined from rust_arc_1.
+* RelAcqDblMsgPassSplit represents msg_pass_split_1 and msg_pass_split_2. The client "client_sound" was used for msg_pass_split_1 and the client "client_unsound" was used for msg_pass_split_2.
+* vstte2012_problem2.vpr represents combinator
+
 
 # Inlining Tool
 The source for our inlining tool for Viper, which also checks the structural soundness condition is located at https://github.com/tdardinier/carbon 
