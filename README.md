@@ -80,9 +80,9 @@ The following command shows the most common options for a file test.vpr:
 
 - `--SI 2` sets the inlining bound to 2
 - `--entry main` sets the method main to the initial method to inline
-- `--modularSC` is the option which performs an optimization that replaces
-mono checks by framing checks and as a result can omit some framing checks 
-(using that framing implies mono and the sequential composition of two framing 
+- `--modularSC` is an option which performs an optimization that adds
+framing checks to mono checks and as a result can omit some framing checks 
+(using that the sequential composition of two framing 
 statements is framing). This can lead to incompleteness, but is mostly not an 
 issue in practice (we used it for all our examples in the evaluation).
 
