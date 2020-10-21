@@ -11,7 +11,7 @@ This repository contains the artifact for the paper "Sound Inlining for Automati
 The Isabelle/HOL formalization of the soundness theorem (Theorem 3.1) contains 3 files:
 - ./soundness/SepAlgebra.thy: This theory formalizes the separation algebra of Definition 1.
 - ./soundness/Semantics.thy: This theory formalizes the abstract verification language (Sect. 3.2) with its semantics, as well as mono and framing.
-- ./soundness/Soundness.thy: This theory formalizes inlining (Definition 6), the soundness condition (Definition 9), and proves the soundness theorem (Theorem 3.1). The soundness theorem's name in the file is "soundness" and can be found at the very end.
+- ./soundness/Soundness.thy: This theory formalizes inlining (Definition 5), the soundness condition (Definition 8), and proves the soundness theorem (Theorem 1). The soundness theorem's name in the file is "soundness" and can be found at the very end.
 
 The formalization works with both Isabelle 2019 and Isabelle 2020.
 
@@ -25,16 +25,17 @@ For each of the files not in the syntactic folder, there is a corresponding file
 * GRASShopper: https://github.com/wies/grasshopper/tree/master/tests
 * Nagini: https://github.com/marcoeilers/nagini/tree/master/tests (considered those examples under "verification" folders and excluded tests in arp folder)
 * RSL-Viper: https://github.com/viperproject/examples/tree/master/cav2017
+* Viper (examples used for Table 2): http://viper.ethz.ch/examples/
 
 ## Names
 The names of the examples in Table 1 are slightly different to the names here (we shortened them in the paper due to space constraints). Here is the correspondence for those that are unclear:
 
-* RelAcqRustARCStronger_inline represents rust_arc_1 and rust_arc_2. The client "new_clone" was inlined for rust_arc_2, while the remaining clients were inlined from rust_arc_1.
+* RelAcqRustARCStronger_inline represents rust_arc.
 * RelAcqDblMsgPassSplit represents msg_pass_split_1 and msg_pass_split_2. The client "client_sound" was used for msg_pass_split_1 and the client "client_unsound" was used for msg_pass_split_2.
 * vstte2012_problem2.vpr represents combinator
 
 ## Run Configurations
-In the folders for GRASShopper, VeriFast, Nagini and RSL-Viper a .json is stored which shows the test configurations used for the experiments. Note that we inlined multiple methods for each example in Table 1. Sometimes we also wrote multiple files for convenience (to introduce errors), it should be clear which files belong to which examples in Table 1 from the names. In VeriFast, the different errors can be triggered by changing the ERROR macro accordingly (in the .json file this is reflected by referring to different files).
+In each example folder a .json is stored, which shows the test configurations used for the experiments. Note that we inlined multiple methods for each example in Table 1. Sometimes we also wrote multiple files for convenience (to introduce errors), it should be clear which files belong to which examples in Table 1 from the names. For the VeriFast and for the syntactic examples, the different errors can be triggered by changing the ERROR macro accordingly (in the .json file this is reflected by referring to different files).
 
 ## Lines of Code
 In the following, we explain how we count the lines of code in Table 1.

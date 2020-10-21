@@ -1,14 +1,14 @@
 [
 { 
   "file":"RelAcqDblMsgPassSplit.sil",
-  "bound":2,
+  "bound":1,
   "entry":"client_sound",
   "sc_holds":true,
   "errors":[{"tag": "assert.failed:assertion.false"}]
 },
 { 
   "file":"RelAcqDblMsgPassSplit.sil",
-  "bound":2,
+  "bound":1,
   "entry":"client_unsound",
   "sc_holds":false,
   "errors":[{"tag": "postcondition.violated:assertion.false"}]
@@ -36,7 +36,7 @@
 },
 { 
   "file":"RelAcqRustARCStronger_inline.sil",
-  "bound":2,
+  "bound":1,
   "entry":"new_drop_read",
   "sc_holds":true,
   "errors":[
@@ -45,7 +45,7 @@
 },
 { 
   "file":"RelAcqRustARCStronger_inline.sil",
-  "bound":2,
+  "bound":1,
   "entry":"new_drop_drop",
   "sc_holds":true,
   "errors":[
@@ -55,20 +55,13 @@
 },
 { 
   "file":"RelAcqRustARCStronger_inline.sil",
-  "bound":2,
+  "bound":1,
   "entry":"new_exhale_drop",
   "sc_holds":true,
   "errors":[
     {"tag": "exhale.failed:insufficient.permission"},
     {"tag": "exhale.failed:insufficient.permission"}
   ]
-},
-{ 
-  "file":"RelAcqRustARCStronger_inline.sil",
-  "bound":2,
-  "entry":"new_clone",
-  "sc_holds":false,
-  "errors":[]
 },
 { 
   "file":"RelAcqRustARCStronger_inline.sil",

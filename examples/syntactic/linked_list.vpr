@@ -209,7 +209,7 @@ label acq
 
   /* Release lock */
   exhale    acc(List(lock)) && acc(lock.held) && acc(lock.changed)
-  //&& Incompleteness of tool: (old[acq](content(lock)) == content(lock) || lock.changed)
+    && (old[acq](content(lock)) == content(lock) || lock.changed)
 
   exhale [true, forperm r: Ref [r.held] :: false] 
 }
